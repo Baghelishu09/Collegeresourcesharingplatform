@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> COLLEGE E RESOURCE</title>
+        <!-- Google Fonts CDN for Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">      
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="font-sans">
+    <nav class="w-full h-16 bg-white dark:bg-slate-800 flex justify-between px-2 py-1 md:py-2 md:px-3 items-center">
+        <div>
+            <h1 class="text-gray-600 font-medium text-xs md:text-lg dark:text-white">COLLEGE E RESOURCE</h1>
+        </div>    
+        <div class="md:flex hidden items-center">
+            <input type="text" placeholder="Search resources.." class="w-96 h-10 rounded-lg px-3 dark:bg-slate-50 bg-slate-200 border-black
+            border-solid">
+            <i class="fa-solid fa-magnifying-glass text-gray-600 dark:text-white md:pl-2"></i>
+        </div>
+        <div class="hidden md:block">
+            <button class="text-gray-600 dark:text-white  font-thin hover:font-bold focus:underline focus:font-bold">Login/SignUp</button>
+        </div>
+        <ul class="md:flex mr-6 hidden">
+            <li><a href="#" class="text-gray-600 dark:text-white font-thin mx-2 focus:underline focus:font-bold hover:font-bold ">HOME</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-white font-thin mx-2 focus:underline focus:font-bold hover:font-bold">RESOURCE</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-white font-thin mx-2 focus:underline focus:font-bold hover:font-bold">CONTACT US</a></li>
+        </ul>
+        <div class="bg-slate-700 p-3 rounded-full cursor-pointer">
+            <p class="text-xs font-medium text-white" id="mode">Light Mode</p>
+        </div>
+        <div class="md:hidden">
+            <a href="#" id="menu_bar" class="text-gray-600 dark:text-white font-normal text-xl pr-3 focus:bg-gray-200">&#8801</a>
+            <a href="#" id="close" class="text-gray-600 hidden dark:text-white font-normal text-xl pr-3 focus:bg-gray-200">&#10006</a>
+            <div class="hidden bg-white text-sm mt-28" id="menu">
+                <ul>
+                    <li><input type="text" placeholder="Search" class=" border-solid rounded-md my-2"></li>
+                    <li><a href="#" class="font-thin my-2">HOME</a></li>
+                    <li><a href="#" class="font-thin">RESOURCE</a></li>
+                    <li><a href="#" class="font-thin">CONTACT</a></li>
+                    <li><button class="font-thin">Login/SignUp</button></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div>
+            <img src="/assets/images/image5.jpg" class="w-full md:h-[90vh] bg-opacity-70 h-[90vh]" alt="library_image">
+        </div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+            <h1 class="text-2xl font-serif md:text-6xl text-white md:font-thin">COLLEGE E RESOURCE</h1>
+            <p class="text-white text-xs md:text-xl uppercase font-medium">A platform to access all the resources you need</p>
+        </div>
+        <!--Transparent footer inside the image-->
+        <footer class="absolute w-full bottom-0 bg-black text-white text-center bg-opacity-60">
+            <ul class="md:flex flex md:justify-center md:mt-8 md:text-lg justify-evenly">
+                <li class="md:mx-10"><a href="#"><i class="fa-brands fa-instagram font-thin hover:font-bold"></i></a></li>
+                <li class="md:mx-10"><a href="#"><i class="fa-brands fa-facebook font-thin hover:font-bold"></i></a></li>
+                <li class="md:mx-10"><a href="#"><i class="fa-brands fa-twitter font-thin hover:font-bold"></i></a></li>
+                <li class="md:mx-10"><a href="#"><i class="fa-brands fa-github font-thin hover:font-bold"></i></a></li>
+                <li class="md:mx-10"><a href="#"><i class="fa-brands fa-linkedin-in font-thin hover:font-bold"></i></a></li>
+            </ul>
+            <br>
+            <p class="md:text-sm md:mb-2 text-xs">Copyright &copy; All right reserved | This site is made by Ishu Baghel</p>
+        </footer>
+    </header>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
