@@ -4,3 +4,8 @@ document.getElementById('mode').addEventListener('click', function() {
     localStorage.setItem('theme', theme);
     document.getElementById('mode').innerHTML = theme === 'dark' ? 'Dark Mode' : 'Light Mode';
 });
+document.getElementById('redirect_login').addEventListener('click', function() {
+    window.location.href = '/userAuth';
+});
+
+

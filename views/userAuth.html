@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <nav class="w-full h-16 bg-white dark:bg-slate-800 flex justify-between px-2 py-1 md:py-2 md:px-3 items-center">
+        <div>
+            <h1 class="text-gray-600 font-medium text-lg dark:text-white">Share&Borrow</h1>
+        </div>    
+        <div class="md:flex hidden items-center">
+            <input type="text" placeholder="Search resources.." class="w-96 h-10 rounded-lg px-3 dark:bg-slate-50 bg-slate-200 border-black
+            border-solid">
+            <i class="fa-solid fa-magnifying-glass text-gray-600 dark:text-white md:pl-2"></i>
+        </div>
+        <ul class="md:flex mr-6 hidden">
+            <li><a href="/" id="home" class="text-gray-600 dark:text-white font-thin mx-2 focus:underline focus:font-bold hover:font-bold ">HOME</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-white font-thin mx-2 focus:underline focus:font-bold hover:font-bold">RESOURCE</a></li>
+            <li><a href="#" class="text-gray-600 dark:text-white font-thin mx-2 focus:underline focus:font-bold hover:font-bold">CONTACT US</a></li>
+        </ul>
+        <div class="bg-slate-700 p-3 rounded-full cursor-pointer">
+            <p class="text-xs font-medium text-white" id="mode">Light Mode</p>
+        </div>
+        <div class="md:hidden">
+            <a href="#" id="menu_bar" class="text-gray-600 dark:text-white font-normal text-xl pr-3 focus:bg-gray-200">&#8801</a>
+            <a href="#" id="close" class="text-gray-600 hidden dark:text-white font-normal text-3xl pr-3 focus:bg-gray-200">&#10006</a>
+            <div class="hidden bg-white text-sm mt-28" id="menu">
+                <ul>
+                    <li><input type="text" placeholder="Search" class=" border-solid rounded-md my-2"></li>
+                    <li><a href="#" class="font-thin my-2">HOME</a></li>
+                    <li><a href="#" class="font-thin">RESOURCE</a></li>
+                    <li><a href="#" class="font-thin">CONTACT</a></li>
+                    <li><button class="font-thin">Login/SignUp</button></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Login Form -->
+    <img src="/assets/images/image1.jpg" alt="" class="w-full md:block hidden h-[90vh]" id="image">
+    <div class="absolute md:top-1/4 top-1/4 left-5 md:left-1/3" id="login_form">
+        <div class="md:w-96 w-full h-96 p-5 bg-white dark:bg-slate-800 rounded-lg md:p-4 bg-opacity-80 dark:bg-opacity-80 shadow-lg">
+            <h1 class="text-center text-2xl font-medium text-gray-600 dark:text-white">Login</h1>
+            <form action="/userAuth" method="POST" class="flex flex-col items-center">
+                <input type="text" name="username" placeholder="Username" class="w-60 md:w-80 h-10 rounded-lg px-3 my-2 dark:bg-slate-50 bg-slate-200 border-black border-solid">
+                <input type="password" name="password" placeholder="Password" class="w-60 md:w-80 h-10 rounded-lg px-3 my-2 dark:bg-slate-50 bg-slate-200 border-black border-solid">
+                <button type="submit" class="w-60 md:w-80 h-10 rounded-lg bg-blue-500 text-white dark:bg-blue-500">Login</button>
+            </form>
+            <br>
+            <p class="text-center text-gray-600 dark:text-white">Don't have an account? <a href="#" id="redirect_register" class="text-blue-500">Register</a></p>
+        </div>
+    </div>
+    <!-- Register Form -->
+  <div class="absolute w-full hidden md:hidden md:top-20 md:mt-8 md:mr-10 bg-opacity-60 dark:bg-opacity-65 md:left-48 max-w-4xl p-6 bg-white dark:bg-gray-900 md:rounded-lg shadow-md" id="register_form">
+    <h1 class="text-center text-2xl font-medium text-black mb-4 dark:text-white">Register</h1>
+    <form action="#" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- Form Items -->
+      <div>
+        <label for="item1" class="block mb-1 text-sm font-medium dark:text-white">Name</label>
+        <input type="text" id="item1" class="w-full px-4  border rounded-md bg-gray-50 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="item2" class="block mb-1 text-sm font-medium dark:text-white">Email</label>
+        <input type="text" id="item2" class="w-full px-4  border rounded-md bg-gray-50 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="item3" class="block mb-1 text-sm font-medium dark:text-white">Mobile No</label>
+        <input type="text" id="item3" class="w-full px-4  border rounded-md bg-gray-50 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="item4" class="block mb-1 text-sm font-medium dark:text-white">Address</label>
+        <input type="text" id="item4" class="w-full px-4  border rounded-md bg-gray-50 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="item5" class="block mb-1 text-sm font-medium dark:text-white">Country</label>
+        <input type="text" id="item5" class="w-full px-4  border rounded-md bg-gray-50 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="item6" class="block mb-1 text-sm font-medium dark:text-white">State</label>
+        <input type="text" id="item6" class="w-full px-4  border rounded-md bg-gray-50 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="item7" class="block mb-1 text-sm font-medium dark:text-white">City</label>
+        <input type="text" id="item7" class="w-full px-4  border rounded-md bg-gray-50 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="item8" class="block mb-1 text-sm font-medium dark:text-white">Pincode</label>
+        <input type="text" id="item8" class="w-full px-4  border rounded-md bg-gray-50 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="item9" class="block mb-1 text-sm font-medium dark:text-white">Password</label>
+        <input type="text" id="item9" class="w-full px-4  border rounded-md bg-gray-50 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="item10" class="block mb-1 text-sm font-medium dark:text-white">Confirm Password</label>
+        <input type="text" id="item10" class="w-full px-4  border rounded-md bg-gray-50 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <!-- Button -->
+      <div class="col-span-1 sm:col-span-2 flex justify-center">
+        <button type="submit" class="px-6  text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          Submit
+        </button>
+      </div>
+    </form>
+    <p class="text-sm text-center dark:text-white">Already have an Account? <a href="#" id="redirect_login" class=" text-blue-700 dark:text-blue-300">Login</a></p>
+  </div>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/userAuth.js"></script>
+</body>
+</html>
