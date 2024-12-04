@@ -31,19 +31,28 @@
         <div class="bg-slate-700 p-3 rounded-full cursor-pointer">
             <p class="text-xs font-medium text-white" id="mode">Light Mode</p>
         </div>
-        <div class="md:hidden">
-            <a href="#" id="menu_bar" class="text-gray-600 dark:text-white font-normal text-xl pr-3 focus:bg-gray-200">&#8801</a>
-            <a href="#" id="close" class="text-gray-600 hidden dark:text-white font-normal text-3xl pr-3 focus:bg-gray-200">&#10006</a>
-            <div class="hidden bg-white text-sm mt-28" id="menu">
-                <ul>
-                    <li><input type="text" placeholder="Search" class=" border-solid rounded-md my-2"></li>
-                    <li><a href="#" class="font-thin my-2">HOME</a></li>
-                    <li><a href="#" class="font-thin">RESOURCE</a></li>
-                    <li><a href="#" class="font-thin">CONTACT</a></li>
-                    <li><button class="font-thin">Login/SignUp</button></a></li>
-                </ul>
+        <!--Hamburger menu-->
+        <div class="relative">
+            <div class="flex justify-between items-center text-slate-700">
+              <!-- Hamburger Icon (only on mobile) -->
+              <div class="lg:hidden block cursor-pointer" id="hamburger-icon" onclick="toggleMenu()">
+                <a href="#">&#9776</a>
+              </div>
+                <!-- Close Icon (only on mobile) -->
+                <div class="lg:hidden hidden cursor-pointer" id="close-icon" onclick="closeMenu()">
+                  <a href="#">&#10006</a>
+                </div>  
             </div>
-        </div>
+            
+            <!-- Mobile Menu (hidden by default) -->
+            <div class="lg:hidden md:hidden relative block bg-slate-100 text-slate-700 p-4 top-20 z-10 rounded-md" id="mobile-menu" style="display: none;">
+              <a href="#home" class="block hover:bg-slate-500 px-1 py-2 rounded">Home</a>
+              <a href="#services" class="block hover:bg-slate-500 px-1 py-2 rounded">Resources</a>
+              <a href="#about" class="block hover:bg-slate-500 px-1 py-2 rounded">Contact Us</a>
+              <input type="text" placeholder="Search.." class="w-24 h-10 rounded-lg px-1 py-2 dark:bg-slate-50 bg-slate-200 border-black   border-solid">
+              <button class="text-gray-600  font-thin hover:font-bold focus:underline focus:font-bold px-1 py-2" id="redirect_login">Login/SignUp</button>
+            </div>
+          </div>
     </nav>
     <header>
         <div>
