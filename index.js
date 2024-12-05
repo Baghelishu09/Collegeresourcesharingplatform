@@ -3,7 +3,7 @@ const app = express();
 require('dotenv').config();
 const User = require('./backend/registerdata');
 const port = process.env.PORT || 80;
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const path = require('path');
 
 app.use('/assets',express.static(path.join(__dirname, 'assets')));
