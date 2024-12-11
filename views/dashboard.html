@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>Dashboard</h1>
+    <!--Navbar-->
+    <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+            <input type="text" class="w-1/2 p-2 bg-slate-100 rounded-lg my-2" placeholder="Search Item...">
+            <div class="flex items-center">
+                <a href="/dashboard" class="mr-4 text-xm hover:font-bold focus:font-bold focus:underline">Dashboard</a>
+                <a href="/profile" class="mr-4 text-xm hover:font-bold focus:font-bold focus:underline">Profile</a>
+                <a href="/inbox" class="mr-4 text-xm hover:font-bold focus:font-bold focus:underline">Inbox</a>
+                <a href="/settings" id="logout_button" class="mr-4 text-xm hover:font-bold focus:font-bold focus:underline">Settings</a>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/dashboard.js"></script>
 </body>
 </html>

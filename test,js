@@ -1,0 +1,17 @@
+const express = require('express');
+const app = express();
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
+
+const secretkey = process.env.SECRET_KEY 
+const payload = {
+    name: 'John Doe',
+    email: 'johndoe@gmail.com'
+};
+
+const options = {
+    expiresIn: '1h'
+} 
+
+const token = jwt.sign(payload, secretkey, options);
+console.log(token);

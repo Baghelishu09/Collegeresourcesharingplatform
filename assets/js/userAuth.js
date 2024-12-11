@@ -141,6 +141,7 @@ document.getElementById('login_button').addEventListener('click', function(e){
             // Handle login response
             if(login_data.status === 'success'){
                 alert('Login successful');
+                document.cookie = `jwt=${login_data.token}; path=/; httpOnly; secure; SameSite=Strict`; // Make sure to set cookie attributes
                 // Redirect user or update the UI accordingly
                 window.location.href = '/dashboard'; // Example: redirect to dashboard page
             } else {
